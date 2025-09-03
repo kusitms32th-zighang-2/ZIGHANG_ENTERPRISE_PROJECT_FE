@@ -76,7 +76,7 @@
 /* 전역 폰트 스타일 */
 body {
   font-family: 'Handsome Pro', Pretendard, 'Pretendard Variable', sans-serif;
-  color: #000000;
+  background-color: #ffffff;
 }
 
 @utility title-lg-bold {
@@ -290,7 +290,7 @@ body {
   font-family: var(--Heading-font-family, Pretendard);
   font-size: var(--Heading-lg-font-size, 24px);
   font-style: normal;
-  font-weight: var(--Heading-font-weight-semi-bold, 700);
+  font-weight: var(--Heading-font-weight-semi-bold, 600);
   line-height: var(--Heading-lg-line-height, 28px); /* 116.667% */
   letter-spacing: var(--Heading-letter-spacing, 0);
 }
@@ -460,8 +460,8 @@ body {
   /* Body/lg/semibold */
   font-family: var(--font-family, Pretendard);
   font-size: var(--scale-body-lg, 16px);
-  font-style: normal;
-  font-weight: var(--weight-semibold, 700);
+  font-style: semibold;
+  font-weight: var(--weight-semibold, 600);
   line-height: var(--lh-body-lg, 24px); /* 150% */
 }
 @utility body-lg-medium {
@@ -493,7 +493,7 @@ body {
   font-family: var(--font-family, Pretendard);
   font-size: var(--scale-body-md, 15px);
   font-style: normal;
-  font-weight: var(--weight-semibold, 700);
+  font-weight: var(--weight-semibold, 600);
   line-height: var(--lh-body-md, 24px); /* 160% */
 }
 @utility body-md-medium {
@@ -541,7 +541,7 @@ body {
   font-family: var(--font-family, Pretendard);
   font-size: var(--scale-body-sm, 14px);
   font-style: normal;
-  font-weight: var(--weight-regular, 500);
+  font-weight: var(--weight-regular, 400);
   line-height: var(--lh-body-sm, 20px); /* 142.857% */
 }
 
@@ -586,4 +586,26 @@ body {
   --breakpoint-tablet: 766px;
   --breakpoint-mobile: 320px;
   --breakpoint-wide: 1440px;
+}
+
+@layer utilities {
+  .bg-profile-card {
+    background-image:
+      linear-gradient(
+        145deg,
+        rgba(29, 41, 72, 0.5) 0%,
+        rgba(20, 29, 51, 0.5) 35%,
+        rgba(15, 22, 40, 0.5) 65%,
+        rgba(5, 10, 22, 0.5) 100%
+      ),
+      linear-gradient(
+        145deg,
+        #0F183F 0%,
+        #171F4E 35%,
+        #253073 68%,
+        #2A367F 100%
+      );
+    background-size: cover;
+    background-position: center;
+  }
 }
